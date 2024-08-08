@@ -38,7 +38,7 @@ services:
       - traefik.http.routers.${SERVICE_NAME}-https.tls=true
       - traefik.http.routers.${SERVICE_NAME}-https.tls.certresolver=le
       - traefik.http.routers.${SERVICE_NAME}-ssh.entrypoints=ssh
-      - traefik.http.services.drupal.loadbalancer.server.port=80
+      - traefik.http.services.${SERVICE_NAME}-https.loadbalancer.server.port=80
 
 networks:
   database-network:
