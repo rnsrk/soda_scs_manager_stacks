@@ -12,6 +12,7 @@ services:
     environment:
       DB_HOST: ${DB_HOST}
       DB_DRIVER: ${DB_DRIVER}
+      DEFAULT_GRAPH: ${DEFAULT_GRAPH}
       DOMAIN: ${DOMAIN}
       DRUPAL_USER: ${DRUPAL_USER}
       DRUPAL_PASSWORD: ${DRUPAL_PASSWORD}
