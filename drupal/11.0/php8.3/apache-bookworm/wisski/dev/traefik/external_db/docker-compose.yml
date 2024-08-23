@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   drupal:
-    image: ghcr.io/rnsrk/soda_scs_manager_images:drupal11.0-php8.2-apache-bookworm-vanilla
+    image: ghcr.io/rnsrk/soda_scs_manager_images:drupal11.0-php8.3-apache-bookworm-wisski-dev
     volumes:
       - drupal-modules:/var/www/html/modules
       - drupal-profiles:/var/www/html/profiles
@@ -20,6 +20,11 @@ services:
       DB_USER: ${DB_USER}
       SERVICE_NAME: ${SERVICE_NAME}
       SITE_NAME: ${SITE_NAME}
+      TS_PASSWORD: ${TS_PASSWORD}
+      TS_READ_URL: ${TS_READ_URL}
+      TS_REPOSITORY: ${TS_REPOSITORY}
+      TS_USERNAME: ${TS_USERNAME}
+      TS_WRITE_URL: ${TS_WRITE_URL}
     restart: 'no'
     networks:
       - database-network
